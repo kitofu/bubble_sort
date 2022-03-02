@@ -17,12 +17,12 @@ use rand::Rng;
 fn main() {
     println!("This is bubble sort!");
 
-    let mut a: [i32; 100] = [1; 100];
+    let mut a: [i32; 101] = [1; 101];
 
     for n in 1..101{
         let rand = rand::thread_rng().gen_range(-1000, 1001);
         a[n] = rand;
-        println!("n:{}", a[n]);
+        println!("n{} = {}", n, a[n]);
     }
 
 
