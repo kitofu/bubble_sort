@@ -8,8 +8,6 @@
 // 2022/03/04（金）12:00 まで
 
 
-use std::io;
-use std::io::{stdout, Write};
 use rand::Rng;
 
 
@@ -29,7 +27,7 @@ fn main() {
     //アルゴリズム実行する
     for i in 0..ARRAY_NUM - 1{
         for j in 0..ARRAY_NUM-1-i{
-            if( a[j] > a[j+1] ) {
+            if a[j] > a[j+1] {
                 let big_num = a[j];
                 a[j] = a[j+1];
                 a[j+1] = big_num;
