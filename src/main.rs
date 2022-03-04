@@ -7,19 +7,16 @@
 // 提出期限
 // 2022/03/04（金）12:00 まで
 
-
 use rand::Rng;
-
-
 
 fn main() {
     println!("This is bubble sort!");
 
-
     //配列を用意するi
     const  MIN : i32 = -1000;
     const MAX : i32= 1000;
-    const ARRAY_NUM : usize = 100;
+    const SIZE : usize= 100;
+    const ARRAY_NUM : usize = SIZE;
     let mut a: [i32; ARRAY_NUM] = [1; ARRAY_NUM];
 
     for n in 0..ARRAY_NUM{
@@ -43,17 +40,3 @@ fn main() {
         }
 
 }
-
-// fn array_rand (MIN: i32, MAX: i32, ARRAY_NUM: usize ){
-//     //アルゴリズム実行する
-//     for i in 0..ARRAY_NUM - 1{
-//         for j in 0..ARRAY_NUM-1-i{
-//             if a[j] > a[j+1] {
-//                 let big_num = a[j];
-//                 a[j] = a[j+1];
-//                 a[j+1] = big_num;
-//             }
-//         }
-//     }
-
-// }
