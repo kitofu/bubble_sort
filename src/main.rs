@@ -15,12 +15,15 @@ use rand::Rng;
 fn main() {
     println!("This is bubble sort!");
 
+
     //配列を用意するi
-    const ARRAY_NUM:usize = 100;
+    const  MIN : i32 = -1000;
+    const MAX : i32= 1000;
+    const ARRAY_NUM : usize = 100;
     let mut a: [i32; ARRAY_NUM] = [1; ARRAY_NUM];
 
     for n in 0..ARRAY_NUM{
-        let rand = rand::thread_rng().gen_range(-1000, 1001);
+        let rand = rand::thread_rng().gen_range(MIN, MAX + 1);
         a[n] = rand;
         println!("n{} = {}", n, a[n]);
     }
@@ -40,3 +43,17 @@ fn main() {
         }
 
 }
+
+// fn array_rand (MIN: i32, MAX: i32, ARRAY_NUM: usize ){
+//     //アルゴリズム実行する
+//     for i in 0..ARRAY_NUM - 1{
+//         for j in 0..ARRAY_NUM-1-i{
+//             if a[j] > a[j+1] {
+//                 let big_num = a[j];
+//                 a[j] = a[j+1];
+//                 a[j+1] = big_num;
+//             }
+//         }
+//     }
+
+// }
